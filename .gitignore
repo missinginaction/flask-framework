@@ -1,0 +1,7 @@
+# machine-specific files
+.py[ocd]
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*~
+*.swp

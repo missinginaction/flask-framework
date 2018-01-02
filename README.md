@@ -1,4 +1,10 @@
-Mia's repo to get Flask working on Heroku
+Mia's repo to get Flask working on Heroku.
+A user supplies a stock ticker symbol, and a plot displays the closing prices from the past 30 days.
+This [Flask Demo](https://github.com/thedataincubator/flask-framework) provided the
+framework for the stock ticker app.
+	
+
+
 
 # Flask on Heroku
 
