@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect,url_for
 import pandas as pd
 import datetime as dt
 import os
@@ -67,10 +67,13 @@ def index():
     save(p)
 
 
-    return render_template('stock.html')
+    return redirect('stock')
     
-    
+@app.route('/stock',methods=['GET'])
+def stock():
+  return render_template('stock.html')
+      
 if __name__ == '__main__':
-  #app.run(port=33507)
-  port = int(os.environ.get("PORT", 5000))
-  app.run(host='0.0.0.0', port=port)
+  app.run(port=33507)
+  #port = int(os.environ.get("PORT", 5000))
+  #app.run(host='0.0.0.0', port=port)
