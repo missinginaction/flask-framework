@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import pandas as pd
 import datetime as dt
+import os
 import requests
 from bokeh.plotting import figure, show, output_file, save
 #from bokeh.io import output_file
@@ -68,5 +69,6 @@ def index():
     
     
 if __name__ == '__main__':
-  app.run(port=33507)
-
+  #app.run(port=33507)
+  port = int(os.environ.get("PORT", 5000))
+  app.run(host='0.0.0.0', port=port)
